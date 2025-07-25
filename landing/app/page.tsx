@@ -414,7 +414,9 @@ export default function TallerEntrevistasLanding() {
                   <li>• Role-playing con preguntas frecuentes</li>
                   <li>• Feedback personalizado</li>
                   <li>• Cómo responder preguntas difíciles</li>
-                  <li>• "¿Por qué deberíamos contratarte?" y más</li>
+                  <li>
+                    • &ldquo;¿Por qué deberíamos contratarte?&rdquo; y más
+                  </li>
                 </ul>
               </CardContent>
             </Card>
