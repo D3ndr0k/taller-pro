@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Form from "@/components/form";
+import Image from "next/image";
 
 export default function TallerEntrevistasLanding() {
   return (
@@ -195,9 +196,15 @@ export default function TallerEntrevistasLanding() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="border-green-200 bg-gradient-to-br from-green-50 to-white">
               <CardHeader className="text-center">
-                <div className="w-24 h-24 bg-green-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <User className="w-12 h-12 text-green-700" />
-                </div>
+                <picture className=" bg-green-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Image
+                    width={96}
+                    height={96}
+                    src="/gabriela.jpeg"
+                    alt="Gabriela Laviano"
+                    className="w-24 h-24 object-cover rounded-full text-green-700"
+                  />
+                </picture>
                 <CardTitle className="text-green-800">
                   Gabriela Laviano
                 </CardTitle>
@@ -229,9 +236,15 @@ export default function TallerEntrevistasLanding() {
 
             <Card className="border-sky-200 bg-gradient-to-br from-sky-50 to-white">
               <CardHeader className="text-center">
-                <div className="w-24 h-24 bg-sky-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <User className="w-12 h-12 text-sky-700" />
-                </div>
+                <picture className=" bg-green-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Image
+                    width={96}
+                    height={96}
+                    src="/andrea.jpeg"
+                    alt="Andrea Pintos"
+                    className="w-24 h-24 object-cover rounded-full text-green-700"
+                  />
+                </picture>
                 <CardTitle className="text-sky-800">Andrea Pintos</CardTitle>
                 <CardDescription className="text-sky-600 font-medium">
                   Profesional en Recursos Humanos
@@ -440,7 +453,7 @@ export default function TallerEntrevistasLanding() {
         id="inscripcion"
         className="py-20 px-4 bg-gradient-to-r from-green-100 to-sky-100"
       >
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center align-center justify-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
             ¡No dejes pasar esta oportunidad!
           </h2>
@@ -471,13 +484,12 @@ export default function TallerEntrevistasLanding() {
               </div>
             </div>
           </div>
-          <Button
-            size="lg"
-            className="bg-green-400 hover:bg-green-500 text-green-900 px-12 py-4 text-lg font-semibold"
-          >
-            <Calendar className="w-6 h-6 mr-2" />
-            Inscribirse Ahora
-          </Button>
+          <div className="flex justify-center mb-8">
+            <Form className="bg-green-300 hover:bg-green-400 text-green-800 px-8 py-3 rounded-lg flex items-center">
+              <Calendar className="w-6 h-6 mr-2" />
+              Inscribirse Ahora
+            </Form>
+          </div>
           <p className="text-sm text-gray-500 mt-4">
             ¿Tienes preguntas? Contáctanos para más información
           </p>
