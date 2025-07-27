@@ -1,10 +1,11 @@
 "use client";
 import { PopupButton } from "@typeform/embed-react";
+import { ReactNode } from "react";
 
 interface PopupProps {
   title?: string;
   className?: string;
-  children?: any;
+  children?: ReactNode;
 }
 
 export const Popup = ({ title, className, children }: PopupProps) => {
