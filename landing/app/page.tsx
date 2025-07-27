@@ -16,8 +16,9 @@ import {
   User,
 } from "lucide-react";
 import Link from "next/link";
-import Form from "@/components/form";
+
 import Image from "next/image";
+import { Popup } from "@/components/popup";
 
 export default function TallerEntrevistasLanding() {
   return (
@@ -59,9 +60,13 @@ export default function TallerEntrevistasLanding() {
               </Link>
             </div>
 
-            <Form className="bg-green-300 hover:bg-green-400 text-green-800 px-4 py-2 rounded-lg hidden md:flex items-center">
+            <Popup className="bg-green-300 hover:bg-green-400 text-green-800 px-4 py-2 rounded-lg hidden md:flex items-center">
               Inscribirse al Taller
-            </Form>
+            </Popup>
+
+            <Popup className="bg-green-300 hover:bg-green-400 text-green-800 px-4 py-2 rounded-lg md:hidden flex items-center">
+              Inscribirse al Taller
+            </Popup>
           </nav>
         </div>
       </header>
@@ -69,7 +74,7 @@ export default function TallerEntrevistasLanding() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <Badge className="mb-6 bg-sky-200 text-sky-800 hover:bg-sky-300">
+          <Badge className="mb-6 bg-sky-200 text-sky-800">
             🌟 Taller Intensivo Práctico
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
@@ -84,10 +89,10 @@ export default function TallerEntrevistasLanding() {
             estudiantes y personas en búsqueda de su primer empleo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Form className="bg-green-300 hover:bg-green-400 text-green-800 px-8 py-3 rounded-lg flex items-center">
+            <Popup className="bg-green-300 hover:bg-green-400 text-green-800 px-8 py-3 rounded-lg flex items-center">
               <Calendar className="w-5 h-5 mr-2" />
               Inscribirse al Taller
-            </Form>
+            </Popup>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
             <div className="flex items-center">
@@ -486,10 +491,10 @@ export default function TallerEntrevistasLanding() {
             </div>
           </div>
           <div className="flex justify-center mb-8">
-            <Form className="bg-green-300 hover:bg-green-400 text-green-800 px-8 py-3 rounded-lg flex items-center">
+            <Popup className="bg-green-300 hover:bg-green-400 text-green-800 px-8 py-3 rounded-lg flex items-center">
               <Calendar className="w-6 h-6 mr-2" />
               Inscribirse Ahora
-            </Form>
+            </Popup>
           </div>
           <p className="text-sm text-gray-500 mt-4">
             ¿Tienes preguntas? Contáctanos para más información
@@ -500,7 +505,7 @@ export default function TallerEntrevistasLanding() {
       {/* Footer */}
       <footer className="bg-gray-800 mx-auto text-white py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          {/*   <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-sky-400 rounded-full flex items-center justify-center">
@@ -544,7 +549,7 @@ export default function TallerEntrevistasLanding() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
             <p>
               &copy; {new Date().getFullYear()} TallerPro. Todos los derechos
